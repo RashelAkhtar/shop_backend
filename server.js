@@ -12,6 +12,8 @@ app.use(cors());
 app.use(express.json());
 app.use(bookingRoutes);
 
+app.use(express.static("public"));
+
 app.use(productRoutes);
 
 const Password = process.env.DB_ADMIN_PASSWORD;
